@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de compra</title>
+  <link rel="stylesheet" href="/css/tela-de-compra.css">
+  <link rel="stylesheet" href="/css/style-PáginaPrincipal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="/index-PáginaPrincipal.html" class="logo">NegociAE<span>.</span></a>
+
+    <nav class="navbar">
+      <a href="/index-tela-leilao.html">Catálogo Leilões</a>
+      <a href="/index-perfil-credor.html">Meus Lances</a>
+      <a href="#contact">Ajuda</a>
+    </nav>
+
+
+  </header>
+
+  <main class="main-container">
+    <section class="catalog-container">
+      <main class="main-container">
+        <section class="catalog-container" id="catalog">
+          <!-- Os cartões de leilão serão inseridos aqui pelo script JavaScript -->
+        </section>
+      </main>
+
+
+      <!-- Adicione mais catálogos conforme necessário -->
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const leilaoId = params.get('id');
+
+        if (!leilaoId) {
+            throw new Error('Leilão não especificado.');
+        }
+
+        const response = await fetch(`http://localhost:3000/api/leiloes/${leilaoId}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const leilao = await response.json();
+
+        if (!leilao) {
+            throw new Error('Dados do leilão não encontrados.');
+        }
+
+        // Função para formatar a data
+        const formatarData = (data) => {
+            return new Date(data).toLocaleDateString('pt-BR');
+        };
+
+        // Formatar data de aquisição
+        const dataAquisicaoFormatada = formatarData(leilao.data_aquisicao);
+
+        // Formatar valor da dívida e lance mínimo para o formato de moeda brasileira
+        const valorDividaFormatado = parseFloat(leilao.valor_divida).toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        });
+        const lanceMinimoFormatado = parseFloat(leilao.lance_minimo).toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        });
+
+        const catalog = document.getElementById('catalog');
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'card';
+        cardDiv.innerHTML = `
+            <img src="${leilao.imagem_url || 'path/to/default/image.jpg'}" alt="${leilao.nome_empresa || 'Nome da Empresa'}" class="card-image">
+            <div class="card-content">
+                <h5>${leilao.nome_empresa || 'Nome da Empresa'}</h5>
+                <p>${leilao.descricao || 'Descrição'}</p>
+                <div class="additional-info">
+                    <p>Data de Aquisição: <span class="acquisition-date">${dataAquisicaoFormatada || 'Data'}</span></p>
+                    <p>Lance Mínimo: <span class="minimum-bid">${lanceMinimoFormatado || 'Valor'}</span></p>
+                </div>
+                <span class="price">${valorDividaFormatado || 'Valor'}</span>
+                <button class="btn-lance">Dar Lance</button>
+            </div>
+        `;
+
+        catalog.appendChild(cardDiv);
+
+    } catch (error) {
+        console.error('Erro ao buscar detalhes do leilão:', error);
+        // Você pode adicionar algum tratamento de erro ou exibição para o usuário aqui
+    }
+});
+
+
+</script>
+
+
+</body>
+
+</html>

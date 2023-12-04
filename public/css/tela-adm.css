@@ -1,0 +1,126 @@
+/* Estilos Gerais */
+body {
+    background: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização de Imagens */
+.ui-w-80 {
+    max-width: 80px;
+    height: auto;
+}
+
+/* Botão Padrão */
+.btn-default {
+    border: 1px solid rgba(24, 28, 33, 0.1);
+    background: rgba(0, 0, 0, 0);
+    color: #4E5155;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-default:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Botão de Destaque */
+.btn-outline-primary {
+    border: 1px solid #26B4FF;
+    background: transparent;
+    color: #26B4FF;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #26B4FF;
+    color: #fff;
+}
+
+/* Botões de Redes Sociais */
+.btn-facebook {
+    background: #1877F2; /* Cor do Facebook */
+    color: #fff;
+}
+
+.btn-facebook:hover {
+    background: #0e5aa7; /* Cor do Facebook ao passar o mouse */
+}
+
+.btn-instagram {
+    background: #E4405F; /* Cor do Instagram */
+    color: #fff;
+}
+
+.btn-instagram:hover {
+    background: #d0314d; /* Cor do Instagram ao passar o mouse */
+}
+
+.btn-google {
+    background: #4285F4; /* Cor da Conta Google */
+    color: #fff;
+}
+
+.btn-google:hover {
+    background: #3367d6; /* Cor da Conta Google ao passar o mouse */
+}
+
+.btn-twitter {
+    background: #1DA1F2; /* Cor do Twitter */
+    color: #fff;
+}
+
+.btn-twitter:hover {
+    background: #0c85d0; /* Cor do Twitter ao passar o mouse */
+}
+
+/* Cursor de Mão para Botões */
+.btn {
+    cursor: pointer;
+}
+
+/* Texto de Cor Suave */
+.text-light {
+    color: #777;
+}
+
+/* Estilo de Cartão */
+.card {
+    background-clip: padding-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Elementos com Borda Interna */
+.row-bordered {
+    border: 1px solid rgba(24, 28, 33, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Campo de Upload de Arquivo */
+.account-settings-fileinput {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* Estilização das Guias de Configurações para Diferentes Estilos */
+.account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.account-settings-links .list-group-item:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+/* Estilização da Opção Selecionada */
+.account-settings-links .list-group-item.active {
+    background: #26B4FF;
+    color: #fff;
+}

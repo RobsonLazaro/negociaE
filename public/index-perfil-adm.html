@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residência | Leilão de Dividas(Perfil ADM)</title>
+    <link rel="stylesheet" href="/css/tela-adm.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4">
+           Administrador
+        </h4>
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account-general">Geral</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-change-password">Alterar Senha</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-info">Informações Pessoais</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-social-links">Redes Sociais</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-connections">Conexões</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-notifications">Notificações</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-owners">Dados dos Leilões</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <div class="card-body media align-items-center">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt class="d-block ui-w-80 avatar">
+                                <div class="media-body ml-4">
+                                    <label class="btn btn-outline-primary">
+                                        Carregar Nova Foto
+                                        <input type="file" class="account-settings-fileinput">
+                                    </label> &nbsp;
+                                    <button type="button" class="btn btn-default md-btn-flat">Redefinir</button>
+                                    <div class="text-light small mt-1">Permitido JPG, GIF ou PNG. Tamanho máximo de 800K</div>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">Nome de Usuário</label>
+                                    <input type="text" class="form-control mb-1" value="nmaxwell">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nome</label>
+                                    <input type="text" class="form-control" value="Nelle Maxwell">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="text" class="form-control mb-1" value="nmaxwell@mail.com">
+                                    <div class="alert alert-warning mt-3">
+                                        Seu e-mail não está confirmado. Por favor, verifique sua caixa de entrada. <a href="javascript:void(0)">Reenviar Confirmação</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Empresa</label>
+                                    <input type="text" class="form-control" value="Empresa Ltda.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Senha Atual</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nova Senha</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Repetir Nova Senha</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Bio</label>
+                                    <textarea class="form-control" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Data de Nascimento</label>
+                                    <input type="text" class="form-control" value="3 de Maio de 1995">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Estado</label>
+                                    <select class="custom-select">
+                                        <option>Acre</option>
+                                        <option>Alagoas</option>
+                                        <option>Amapá</option>
+                                        <option>Amazonas</option>
+                                        <option>Bahia</option>
+                                        <option>Ceará</option>
+                                        <option>Distrito Federal</option>
+                                        <option>Espírito Santo</option>
+                                        <option>Goiás</option>
+                                        <option>Maranhão</option>
+                                        <option>Mato Grosso</option>
+                                        <option>Mato Grosso do Sul</option>
+                                        <option>Minas Gerais</option>
+                                        <option>Pará</option>
+                                        <option>Paraíba</option>
+                                        <option>Paraná</option>
+                                        <option>Pernambuco</option>
+                                        <option>Piauí</option>
+                                        <option>Rio de Janeiro</option>
+                                        <option>Rio Grande do Norte</option>
+                                        <option>Rio Grande do Sul</option>
+                                        <option>Rondônia</option>
+                                        <option>Roraima</option>
+                                        <option>Santa Catarina</option>
+                                        <option>São Paulo</option>
+                                        <option>Sergipe</option>
+                                        <option>Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Contatos</h6>
+                                <div class="form-group">
+                                    <label class="form-label">Telefone</label>
+                                    <input type="text" class="form-control" value="+0 (123) 456 7891">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Website</label>
+                                    <input type="text" class="form-control" value="https://www.seusite.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-social-links">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Twitter</label>
+                                    <input type="text" class="form-control" value="https://twitter.com/seu-usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Facebook</label>
+                                    <input type="text" class="form-control" value="https://www.facebook.com/seu-usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Google+</label>
+                                    <input type="text" class="form-control" value="https://plus.google.com/seu-usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">LinkedIn</label>
+                                    <input type="text" class="form-control" value="https://www.linkedin.com/in/seu-usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Instagram</label>
+                                    <input type="text" class="form-control" value="https://www.instagram.com/seu-usuario">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-connections">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-twitter">Conectar ao <strong>Twitter</strong></button>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <h5 class="mb-2">
+                                    <a href="javascript:void(0)" class="float-right text-muted text-tiny"><i class="ion ion-md-close"></i> Remover</a>
+                                    <i class="ion ion-logo-google text-google"></i>
+                                    Você está conectado ao Google:
+                                </h5>
+                                <a href="mailto:seu-email@dominio.com" class="__cf_email__" data-cfemail="f97f7c7b647b69707cb97c707c">[email&#160;protected]</a>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-facebook">Conectar ao <strong>Facebook</strong></button>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-instagram">Conectar ao <strong>Instagram</strong></button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-notifications">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Notificações de Leilões de Dívidas</h6>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Me envie um e-mail quando um novo leilão de dívidas for criado</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class "switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Me envie um e-mail quando uma dívida for vendida em leilão</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Notificar-me sobre lances em leilões de dívidas</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Envie-me um resumo diário de atividades de leilão</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-owners">
+                            <!-- Conteúdo da guia Donos de Leilões (Administração) -->
+                            <div class="card-body">
+                                <h5>Administração</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Leilão 1
+                                        <span class="badge badge-primary badge-pill">Dono: Usuário X</span>
+                                        <button type="button" class="btn btn-outline-primary btn-sm">Finalizar</button>
+                                        <button type="button" class="btn btn-outline-warning btn-sm">Renomear</button>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Leilão 2
+                                        <span class="badge badge-primary badge-pill">Dono: Usuário Y</span>
+                                        <button type="button" class="btn btn-outline-primary btn-sm">Finalizar</button>
+                                        <button type="button" class="btn btn-outline-warning btn-sm">Renomear</button>
+                                    </li>
+                                    <!-- Adicione mais leilões conforme necessário -->
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Leilão 3
+                                        <span class="badge badge-primary badge-pill">Dono: Usuário Z</span>
+                                        <button type="button" class="btn btn-outline-primary btn-sm">Finalizar</button>
+                                        <button type="button" class="btn btn-outline-warning btn-sm">Renomear</button>
+                                    </li>
+                                </ul>
+                                <!-- Botão Adicionar Leilão -->
+                                <button type="button" class="btn btn-success mt-3">Adicionar Leilão</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-right mt-3">
+            <button type="button" class="btn btn-primary">Salvar Alterações</button>&nbsp;
+            <button type="button" class="btn btn-default">Cancelar</button>
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        // Se você deseja adicionar funcionalidades específicas, por favor, especifique o que você gostaria de adicionar.
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residência | Leilão de Dividas(Perfil Vendedor)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/perfil-venda.css">
+</head>
+<body>
+    <main class="py-4">
+        <div class="container">
+            <h4 class="text-center font-weight-bold mb-4">Perfil do Vendedor</h4>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <!-- Cartão de informações da empresa -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="/img/beise_logo.png" alt="Admin" class="rounded-circle mb-3" width="150">
+                            <h4 class="card-title">BAISE IMÓVEIS</h4>
+                            <p class="text-secondary">Chapecó, SC</p>
+                            <p class="text-muted font-size-sm">ATIVO</p>
+                            <a href="/index-cad-leilao.html" class="btn btn-primary text-white">Cadastrar Leilão</a>
+                            <button class="btn btn-outline-primary">Meus Leilões</button>
+                        </div>
+                    </div>
+                    <!-- Cartão de informações do CEO -->
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="row label-row">
+                                <div class="col-6"><h6>CEO</h6></div>
+                                <div class="col-6"><p class="text-secondary" id="ceoName">Carregando...</p></div>
+                            </div>
+                            <div class="row label-row">
+                                <div class="col-6"><h6>Email</h6></div>
+                                <div class="col-6"><p class="text-secondary" id="userEmail">Carregando...</p></div>
+                            </div>
+                            <div class="row label-row">
+                                <div class="col-6"><h6>Telefone</h6></div>
+                                <div class="col-6"><p class="text-secondary" id="userPhone">Carregando...</p></div>
+                            </div>
+                            <div class="row label-row">
+                                <div class="col-6"><h6>CNPJ</h6></div>
+                                <div class="col-6"><p class="text-secondary" id="userCnpj">Carregando...</p></div>
+                            </div>
+                            <button class="btn btn-info btn-block btn-lg" onclick="confirmLogout()">Sair</button>
+                        </div>
+                    </div>
+                    <!-- Leilões Recentes e Lances Recentes -->
+                    <div class="row">
+                        <div class="col-sm-6 mt-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="text-info mb-3">Leilões Recentes</h6>
+                                    <p>Nenhum Leilão em Andamento</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="text-info mb-3">Lances Recentes</h6>
+                                    <p>Nenhum Lance Encontrado</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+      fetch('http://localhost:3000/api/usuarios/perfil')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Falha ao carregar dados do usuário');
+          }
+          return response.json();
+        })
+        .then(data => {
+          document.getElementById('ceoName').textContent = data.username || 'Não disponível';
+          document.getElementById('userEmail').textContent = data.email || 'Não disponível';
+          document.getElementById('userPhone').textContent = data.telefone || 'Não disponível';
+          document.getElementById('userCnpj').textContent = data.cnpj || 'Não disponível';
+        })
+        .catch(error => {
+          console.error('Erro:', error);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      function confirmLogout() {
+          Swal.fire({
+              title: 'Você tem certeza?',
+              text: "Você deseja sair da sua conta?",
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Sim, sair!'
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  window.location.href = "/"; // Redireciona para a página inicial ou para a rota de logout
+              }
+          });
+      }
+  </script>
+  
+
+</body>
+</html>

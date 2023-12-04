@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 70px; /* Considerando que você tem um cabeçalho fixo */
+}
+
+.catalog-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row; /* Ajuste para ter imagem à esquerda e conteúdo à direita */
+  width: 80%;
+  max-width: 1200px; /* Limita o tamanho máximo do cartão */
+  margin: 1rem auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 50%; /* Ajuste a porcentagem conforme necessário */
+  object-fit: cover; /* Garante que a imagem cubra a área designada sem distorção */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  flex: 1;
+}
+
+h5 {
+  font-size: 3rem; 
+  color: #333;
+  margin-bottom: 0.5rem; 
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem; 
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+}
+
+.additional-info {
+  font-size: 1rem; 
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.acquisition-date {
+  color: #3b8db8;
+}
+
+.minimum-bid {
+  color: #3b8db8;
+}
+
+
+
+
+.price {
+  font-size: 1.8rem; 
+  font-weight: bold;
+  color: #54a9ea;
+  margin-bottom: 0.5rem; /* Reduz o espaçamento acima do botão */
+}
+
+.btn-lance {
+  padding: 2rem 1.5rem; /* Aumenta o tamanho do botão */
+  border: none;
+  border-radius: 5px;
+  background-color: #54a9ea;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2rem; /* Tamanho maior para o texto do botão */
+}
